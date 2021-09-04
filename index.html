@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Account</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo_bank.png" type="image/x-icon">
+</head>
+<body>
+   <header>
+    <h1 class="text-4xl max-w-6xl mx-auto text-center mt-14 text-green-700 font-medium">This is my cool bank management syestem Login Form!</h1>
+   </header>
+
+   <main>
+        <div class="max-w-2xl mx-auto w-3/4">
+            <p>you can now test</p>
+            <p>Email: testuser1@gmail.com</p>
+            <p>Password: testUser</p>
+        </div>
+
+       <section class="bg-green-100 max-w-2xl mx-auto mt-10 py-8 pb-10 px-12">
+           <h3 class="text-2xl mb-5 color text-gray-600">
+               Please Login Here
+           </h3>
+           
+        <div>
+            <input id="input_field" class="mb-3 block w-3/4 h-8 py-5 px-1 border-2 border-gray-200 rounded text-xl border-transparent focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent" type="email" placeholder="Enter Your Email" required>
+
+            <input id="password" class="block w-3/4 h-8 py-5 px-1 border-2 border-gray-200 rounded text-xl border-transparent focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent" type="password" placeholder="Password" required>
+
+            <button id="login_submit" class="py-2 px-5 text-xl text-white rounded-md mt-3 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">Submit</button>
+            <p id="error"></p>
+       </div>
+       
+       </section>
+   </main>
+    
+
+<script src="js/login.js"></script>
+</body>
+</html>
