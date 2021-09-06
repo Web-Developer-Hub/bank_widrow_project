@@ -42,7 +42,6 @@ document.getElementById('withdrawButton').addEventListener('click', function () 
             withdrawBlance.innerText = totalWithdrawBlance; 
         }
         
-        
         //my blance code here withdraw....
         const myBlance = document.getElementById('my_blance');
         const myBlanceValue = myBlance.innerText;
