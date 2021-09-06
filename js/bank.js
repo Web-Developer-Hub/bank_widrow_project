@@ -27,16 +27,36 @@ document.getElementById('withdrawButton').addEventListener('click', function () 
     const withdrawAmountValue = withdrawAmount.value;
     if (withdrawAmountValue > 0) {
         const withdrawBlance = document.getElementById('withdraw_blance');
-        const previousWithdrawAmount = withdrawBlance.innerText;
-        const totalWithdrawBlance = parseFloat(previousWithdrawAmount) + parseFloat(withdrawAmountValue);
-        withdrawBlance.innerText = totalWithdrawBlance;
+        const previousWithdrawAmountText = withdrawBlance.innerText;
+        const previousWithdrawAmount = parseFloat(previousWithdrawAmountText)
+        const withdrawAmountValueNumber = parseFloat(withdrawAmountValue)
+         
+        // total blance portion here
+        const myBlance2 = document.getElementById('my_blance');
+        const myBlanceValue2 = myBlance2.innerText;
+        const numberMyBlance2 = parseFloat(myBlanceValue2);
+    
+        // simple validation 
+        if (withdrawAmountValueNumber <= numberMyBlance2) {
+            const totalWithdrawBlance = withdrawAmountValueNumber + previousWithdrawAmount
+            withdrawBlance.innerText = totalWithdrawBlance; 
+        }
+        
         
         //my blance code here withdraw....
         const myBlance = document.getElementById('my_blance');
         const myBlanceValue = myBlance.innerText;
-        totalMyBlance = parseFloat(myBlanceValue) - parseFloat(withdrawAmountValue);
-        myBlance.innerText = totalMyBlance;
-        withdrawAmount.value = null;
+        const numberMyBlance = parseFloat(myBlanceValue);
+        const numberWithdrawAmountValue = withdrawAmountValueNumber;
+        
+        if (numberWithdrawAmountValue <= numberMyBlance) {
+            totalMyBlance = numberMyBlance - numberWithdrawAmountValue;
+            myBlance.innerText = totalMyBlance;
+            withdrawAmount.value = null;
+        }
+        else {
+            withdrawAmount.value = null;
+        }
     }
     else {
         withdrawAmount.value = null;
